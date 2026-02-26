@@ -128,8 +128,34 @@ export default function Contact() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("loading");
-    // Simulate async send
-    setTimeout(() => setStatus("success"), 1600);
+
+    const form = e.target as HTMLFormElement;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const company = (form.elements.namedItem("company") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    const text = [
+      `Hi, I'm interested in wholesale enquiry.`,
+      ``,
+      `Name: ${name}`,
+      `Email: ${email}`,
+      company ? `Company: ${company}` : null,
+      `Phone: ${phone}`,
+      ``,
+      `Message: ${message}`,
+    ]
+      .filter((line) => line !== null)
+      .join("\n");
+
+    const waNumber = CONTACT_INFO.phone.replace(/\D/g, "");
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+
+    setTimeout(() => {
+      setStatus("success");
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    }, 600);
   }
 
   return (
