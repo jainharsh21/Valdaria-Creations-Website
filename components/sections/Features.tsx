@@ -33,11 +33,10 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"
         >
-          {FEATURES.map((feature, i) => {
+          {FEATURES.map((feature) => {
             const Icon = iconMap[feature.icon as keyof typeof iconMap];
-            const isMiddle = i === 1;
 
             return (
               <motion.div
@@ -45,14 +44,8 @@ export default function Features() {
                 variants={staggerItem}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className={`relative group bg-white rounded-sm p-8 border border-[var(--color-border)] hover:border-[var(--color-gold)] hover:shadow-[0_20px_50px_rgba(28,43,58,0.1)] transition-all duration-400 ${
-                  isMiddle ? "md:-mt-6 md:mb-6" : ""
-                }`}
+                className="relative group bg-white rounded-sm p-8 border border-[var(--color-border)] hover:border-[var(--color-gold)] hover:shadow-[0_20px_50px_rgba(28,43,58,0.1)] transition-all duration-400"
               >
-                {/* Gold top accent on middle card */}
-                {isMiddle && (
-                  <div className="absolute top-0 left-8 right-8 h-[3px] bg-[var(--color-gold)] rounded-b-sm" />
-                )}
 
                 {/* Sweep shine on hover */}
                 <div className="absolute inset-0 rounded-sm overflow-hidden pointer-events-none">
