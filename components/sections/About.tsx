@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Medal, Users, Handshake, Check } from "lucide-react";
+import { Medal, Home, Handshake, Check } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { ABOUT_FEATURES } from "@/lib/constants";
 import {
@@ -14,7 +14,7 @@ import {
   viewportOnce,
 } from "@/lib/animations";
 
-const iconMap = { Medal, Users, Handshake } as const;
+const iconMap = { Medal, Home, Handshake } as const;
 
 export default function About() {
   return (
@@ -126,8 +126,8 @@ export default function About() {
               {[
                 "Flexible MOQ",
                 "Direct from Workshop",
-                "Custom Designs",
-                "Pan-India Delivery",
+                "Trusted Since 1996",
+                "Mumbai Based",
               ].map((tag) => (
                 <span
                   key={tag}

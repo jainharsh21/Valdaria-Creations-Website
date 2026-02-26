@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shirt, Truck, Tag, ArrowRight } from "lucide-react";
+import { Shirt, Boxes, Tag, ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { FEATURES } from "@/lib/constants";
 import {
@@ -12,7 +12,7 @@ import {
 
 const iconMap = {
   Shirt,
-  Truck,
+  Boxes,
   Tag,
 } as const;
 

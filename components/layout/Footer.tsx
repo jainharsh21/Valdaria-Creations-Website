@@ -14,10 +14,10 @@ export default function Footer() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
+          className="grid grid-cols-1 md:grid-cols-3 gap-12"
         >
           {/* Brand column */}
-          <motion.div variants={staggerItem} className="lg:col-span-1">
+          <motion.div variants={staggerItem}>
             <Link
               href="#home"
               className="inline-block mb-5 focus-visible:outline-none"
@@ -34,10 +34,10 @@ export default function Footer() {
               craftsmanship since 1996.
             </p>
             <div className="space-y-1.5">
-              <p className="text-[0.75rem] text-[var(--color-fog)]">
+              <p className="text-[0.875rem] text-[var(--color-fog)]">
                 {CONTACT_INFO.email}
               </p>
-              <p className="text-[0.75rem] text-[var(--color-fog)]">
+              <p className="text-[0.875rem] text-[var(--color-fog)]">
                 {CONTACT_INFO.phone}
               </p>
             </div>
@@ -70,10 +70,21 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[0.75rem] text-white/40">
-            &copy; 2025 Valdaria Creation. All Rights Reserved.
+          <p className="text-[0.875rem] text-white/40">
+            &copy; {new Date().getFullYear()} Valdaria Creation. All Rights Reserved.
           </p>
-          <p className="text-[0.75rem] text-white/30">
+          <p className="text-[0.875rem] text-white/40">
+            Made with ♥ by{" "}
+            <a
+              href="https://www.linkedin.com/in/jainharsh21/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-gold)] hover:underline"
+            >
+              Harsh Jain
+            </a>
+          </p>
+          <p className="text-[0.875rem] text-white/30">
             Premium Wholesale Menswear · Mumbai
           </p>
         </div>

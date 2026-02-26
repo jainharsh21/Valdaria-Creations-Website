@@ -21,11 +21,11 @@ export const FEATURES = [
     cta: { label: "View Collections", href: "#categories" },
   },
   {
-    icon: "Truck",
-    title: "Reliable Shipping",
+    icon: "Boxes",
+    title: "Bulk Order Ready",
     description:
-      "With our efficient logistics network, we ensure timely delivery of your orders across the country, helping you maintain your inventory.",
-    cta: { label: "Contact Us", href: "#contact" },
+      "We specialize in large-volume wholesale orders, making it easy for retailers to stock up on premium menswear collections in one seamless transaction.",
+    cta: { label: "Place an Order", href: "#contact" },
   },
   {
     icon: "Tag",
@@ -83,10 +83,10 @@ export const ABOUT_FEATURES = [
       "Rigorous quality control processes ensure every garment meets our strict standards before shipping.",
   },
   {
-    icon: "Users",
-    title: "Expert Team",
+    icon: "Home",
+    title: "Trusted",
     description:
-      "Our team of experienced designers and craftsmen bring decades of expertise to every collection.",
+      "A family-run business since 1996, built on trust, personal care, and a deep passion for quality menswear.",
   },
   {
     icon: "Handshake",
@@ -120,16 +120,6 @@ export const FOOTER_COLUMNS = [
       { label: "Formal Shirts", href: "#categories" },
       { label: "Trousers", href: "#categories" },
       { label: "Kurtas", href: "#categories" },
-    ],
-  },
-  {
-    title: "Industries",
-    links: [
-      { label: "Retail Chains", href: "#contact" },
-      { label: "Boutique Stores", href: "#contact" },
-      { label: "E-commerce", href: "#contact" },
-      { label: "Department Stores", href: "#contact" },
-      { label: "Distributors", href: "#contact" },
     ],
   },
 ] as const;
