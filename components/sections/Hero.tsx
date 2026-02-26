@@ -150,7 +150,7 @@ export default function Hero() {
             >
               <motion.div style={{ y: imageY }}>
                 <Image
-                  src="https://img.freepik.com/premium-photo/happy-groom-white-shirt_115318-1443.jpg?w=826"
+                  src="/hero.webp"
                   alt="Premium menswear from Valdaria Creation"
                   width={600}
                   height={750}

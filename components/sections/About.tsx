@@ -60,7 +60,7 @@ export default function About() {
 
               <div className="overflow-hidden rounded-sm">
                 <Image
-                  src="https://img.freepik.com/free-photo/sewing-machine-tailor_1203-4718.jpg?w=826"
+                  src="/about.webp"
                   alt="Skilled tailors at Valdaria Creation workshop in Mumbai"
                   width={580}
                   height={680}

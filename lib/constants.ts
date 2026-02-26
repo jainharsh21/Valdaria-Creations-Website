@@ -40,22 +40,19 @@ export const CATEGORIES = [
   {
     title: "Formal Shirts",
     count: "120+ Designs",
-    image:
-      "https://img.freepik.com/premium-photo/happy-groom-white-shirt_115318-1443.jpg?w=826",
+    image: "/category-images/shirts.webp",
     alt: "Formal Shirts Collection",
   },
   {
     title: "Trousers",
     count: "85+ Designs",
-    image:
-      "https://img.freepik.com/free-photo/businessman-wearing-black-pants-with-white-shirt_53876-102237.jpg?w=826",
+    image: "/category-images/trousers.webp",
     alt: "Trousers Collection",
   },
   {
     title: "Kurtas",
     count: "75+ Designs",
-    image:
-      "https://img.freepik.com/premium-photo/man-green-floral-dress-with-white-pants-green-shirt_953460-24.jpg?w=996",
+    image: "/category-images/kurtas.webp",
     alt: "Kurtas Collection",
   },
 ] as const;
@@ -98,7 +95,7 @@ export const ABOUT_FEATURES = [
 
 export const CONTACT_INFO = {
   address:
-    "12/16 3rd Floor Shree Thackersey Golpalji Bldg, Shop No 27, 1st Old Hanuman X Lane, Kalbadevi, Mumbai – 400002",
+    "25/27, 2nd Floor, Shop No 6/B, 1st Old Hanuman Cross Lane, Kalbadevi, Mumbai – 400002",
   phone: "+91 9833654160",
   email: "pravinvaldaria@gmail.com",
   hours: "Monday – Saturday: 1:00 PM – 7:00 PM",
