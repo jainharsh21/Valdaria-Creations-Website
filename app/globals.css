@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand Colours */
+  --color-ink: #1c2b3a;
+  --color-navy: #2c3e50;
+  --color-slate: #3d5166;
+  --color-fog: #8599ab;
+  --color-bone: #f5f3ef;
+  --color-parchment: #ede9e1;
+  --color-border: #ddd9d0;
+  --color-white: #ffffff;
+
+  /* Gold Accent */
+  --color-gold: #c9a96e;
+  --color-gold-light: #e2c99a;
+  --color-gold-dark: #a8855a;
+
+  /* Fonts */
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-montserrat), "Helvetica Neue", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: auto; /* Lenis takes over */
+  }
+
+  body {
+    background-color: #f5f3ef;
+    color: #2c3e50;
+    font-family: var(--font-body);
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background-color: #c9a96e;
+    color: #1c2b3a;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .container-site {
+    width: 90%;
+    max-width: 1300px;
+    margin-inline: auto;
+  }
+
+  .section-pad {
+    padding-block: 7rem;
+  }
+
+  .text-overline {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    color: #c9a96e;
+  }
+
+  .text-display-xl {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .text-display-lg {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  .text-display-md {
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 600;
+  }
+
+  .text-body-lg {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .text-body-md {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
 }
